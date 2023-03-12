@@ -23,7 +23,7 @@ const markup = galleryItems
 
 galleryEl.innerHTML = markup;
 
-const lightbox = new SimpleLightbox('.gallery a', {
+new SimpleLightbox('.gallery a', {
   caption: true,
   captionDelay: 250,
   captionsData: 'alt',
