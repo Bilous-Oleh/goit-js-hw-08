@@ -24,12 +24,16 @@ function handleInputForm(event) {
 
 function handleSubmitForm(event) {
   event.preventDefault();
+
   event.currentTarget.reset();
   localStorage.removeItem(LOCAL_STORAGE_KEY);
+
+  console.log(feedbackForm);
 }
 
 function fillForm() {
   const savedForm = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+
   if (savedForm) {
     formEl.email.value = savedForm.email;
     formEl.message.value = savedForm.message;
